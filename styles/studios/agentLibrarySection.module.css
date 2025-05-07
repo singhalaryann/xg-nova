@@ -1,0 +1,142 @@
+/* styles/studios/agentLibrarySection.module.css */
+.section {
+    padding: 80px 0;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+  
+  .agentsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .agentCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .agentHeader {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  
+  .agentIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: rgba(108, 178, 142, 0.1);
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  
+  .agentTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    flex: 1;
+    margin-right: 90px;
+  }
+  
+  .addButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f0f9f4;
+    color: #43A673;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .agentDescription {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  
+  .agentFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .stars {
+    color: #43A673;
+    font-size: 14px;
+  }
+  
+  .reviews {
+    font-size: 14px;
+    color: #9CA3AF;
+  }
+  
+  .price {
+    font-size: 14px;
+    color: #43A673;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1024px) {
+    .agentsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+    
+    .title {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .agentsGrid {
+      grid-template-columns: 1fr;
+    }
+  }

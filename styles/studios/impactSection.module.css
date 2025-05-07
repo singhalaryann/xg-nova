@@ -1,0 +1,73 @@
+/* styles/studios/impactSection.module.css */
+.section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .statCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .statValue {
+    font-size: 40px;
+    font-weight: 700;
+    color: #43A673;
+    margin-bottom: 12px;
+  }
+  
+  .statTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+  
+  .statDescription {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .statsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section {
+      padding: 60px 0;
+    }
+    
+    .title {
+      font-size: 28px;
+    }
+  }

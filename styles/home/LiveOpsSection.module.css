@@ -1,0 +1,81 @@
+/* components/liveOpsSection.module.css */
+.liveOpsSection {
+    padding: 80px 0;
+    background-color: #fff;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .featureCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .featureCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+  
+  .featureDescription {
+    color: #6B7280;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Adjust grid for tablet */
+  @media (max-width: 1024px) {
+    .featuresGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Adjust grid for mobile */
+  @media (max-width: 640px) {
+    .featuresGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }

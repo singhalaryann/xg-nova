@@ -1,0 +1,45 @@
+/* components/ctaBanner.module.css */
+.ctaBanner {
+    background-color: #43A673;
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .accessButton {
+    background-color: white;
+    color: #43A673;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .accessButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }

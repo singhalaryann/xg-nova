@@ -1,0 +1,192 @@
+/* components/common/header.module.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    z-index: 101;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4B5563;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+  
+  .navLink:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #43A673;
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #43A673;
+  }
+  
+  .navLink:hover:after {
+    width: 100%;
+  }
+  
+  .demoButton {
+    display: inline-block;
+    background-color: #43A673;
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .demoButton:hover {
+    background-color: #5a9876;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 178, 142, 0.2);
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: #4B5563;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  /* Desktop adjustment */
+  @media (min-width: 1280px) {
+    .container {
+      padding: 0 40px;
+    }
+  }
+  
+  /* Tablet styles */
+  @media (max-width: 1023px) {
+    .container {
+      height: 70px;
+    }
+    
+    .navLinks {
+      gap: 24px;
+    }
+    
+    .demoButton {
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 767px) {
+    .mobileMenuButton {
+      display: block;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 80px 24px 40px;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      z-index: 100;
+    }
+    
+    .nav.active {
+      right: 0;
+    }
+    
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .demoButton {
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Add overlay when menu is open */
+    .nav.active::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+  }
+  
+  /* Animation for mobile menu */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .nav.active .navLinks li {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+  }
+  
+  .nav.active .navLinks li:nth-child(1) { animation-delay: 0.1s; }
+  .nav.active .navLinks li:nth-child(2) { animation-delay: 0.2s; }
+  .nav.active .demoButton {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+    animation-delay: 0.3s;
+  }

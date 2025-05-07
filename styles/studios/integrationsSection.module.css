@@ -1,0 +1,137 @@
+/* styles/studios/integrationsSection.module.css */
+.section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: rgba(108, 178, 142, 0.15);
+    color: #43A673;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+  
+  .integrationsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .integrationCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .iconWrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .slackIcon {
+    width: 32px;
+    height: 32px;
+    background-color: #4A154B;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .discordIcon {
+    width: 32px;
+    height: 32px;
+    background-color: #5865F2;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .integrationTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+  
+  .integrationDescription {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  .slackButton, .discordButton {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slackButton {
+    background-color: #4A154B;
+    color: white;
+  }
+  
+  .discordButton {
+    background-color: #5865F2;
+    color: white;
+  }
+  
+  .slackButton:hover {
+    background-color: #3b1139;
+  }
+  
+  .discordButton:hover {
+    background-color: #4752c4;
+  }
+  
+  @media (max-width: 768px) {
+    .integrationsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section {
+      padding: 60px 0;
+    }
+    
+    .title {
+      font-size: 28px;
+    }
+  }

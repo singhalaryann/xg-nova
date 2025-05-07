@@ -1,0 +1,254 @@
+/* components/hero.module.css */
+.heroSection {
+    padding: 80px 0;
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .contentSide {
+    flex: 1;
+  }
+  
+  .tagline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #4B5563;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #43A673;
+    border-radius: 50%;
+  }
+  
+  .heading {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #43A673;
+  }
+  
+  .dark {
+    color: #111827;
+  }
+  
+  .highlighted {
+    color: #34D399;
+    font-weight: 700;
+  }
+  
+  .subheading {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6B7280;
+    margin-bottom: 40px;
+  }
+  
+  .subheading em {
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  .accessButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #43A673;
+    color: white;
+    font-weight: 500;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .accessButton:hover {
+    background-color: #5a9876;
+  }
+  
+  .arrow {
+    font-size: 20px;
+  }
+  
+  .dashboardSide {
+    flex: 1;
+  }
+  
+  .dashboardCard {
+    background-color: #43A673;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  
+  .dashboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .dashboardTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .monitorIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+  .dashboardControls {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .controlDot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+  }
+  
+  .alertCard, .boostCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .alertHeader, .boostHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .alertHeader h3, .boostHeader h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .urgentTag, .recommendedTag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  
+  .urgentTag {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #fecaca;
+  }
+  
+  .recommendedTag {
+    background-color: rgba(52, 211, 153, 0.2);
+    color: #a7f3d0;
+  }
+  
+  .alertDescription, .boostDescription {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .alertActions, .boostActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .investigateButton, .fixNowButton, .launchNowButton {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .investigateButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .fixNowButton, .launchNowButton {
+    background-color: white;
+    color: #43A673;
+  }
+  
+  .agents {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .agentIndicator {
+    width: 16px;
+    height: 16px;
+    background-color: #34D399;
+    border-radius: 50%;
+  }
+  
+  .agentText {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+  }
+  
+  .aiSystemStatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+  }
+  
+  .aiIcon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #34D399;
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .heading {
+      font-size: 42px;
+    }
+    
+    .dashboardCard {
+      max-width: 100%;
+    }
+  }

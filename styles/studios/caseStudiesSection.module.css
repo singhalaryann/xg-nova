@@ -1,0 +1,88 @@
+/* styles/studios/caseStudiesSection.module.css */
+.section {
+    padding: 80px 0;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  
+  .casesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .caseCard {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+  }
+  
+  .caseHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .checkIcon {
+    color: #43A673;
+  }
+  
+  .caseTag {
+    font-size: 14px;
+    color: #43A673;
+    font-weight: 500;
+  }
+  
+  .caseTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+  
+  .caseResult {
+    font-size: 14px;
+    color: #4B5563;
+    line-height: 1.5;
+  }
+  
+  .caseHighlight {
+    color: #43A673;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1024px) {
+    .casesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+    
+    .title {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .casesGrid {
+      grid-template-columns: 1fr;
+    }
+  }
