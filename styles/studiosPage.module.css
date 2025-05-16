@@ -1,0 +1,57 @@
+/* styles/studios/studiosPage.module.css */
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section wrappers for positioning control */
+.featuresSection,
+.commandCenterSection,
+.impactSection,
+.agentLibrarySection,
+.integrationsSection,
+.caseStudiesSection,
+.joinBannerSection {
+  width: 100%;
+}
+
+/* Custom adjustments for specific sections if needed */
+.featuresSection {
+  /* Any specific styling for features section */
+}
+
+.commandCenterSection {
+  /* Any specific styling for command center section */
+}
+
+.impactSection {
+  /* Any specific styling for impact section */
+}
+
+.agentLibrarySection {
+  /* Any specific styling for agent library section */
+}
+
+.integrationsSection {
+  /* Any specific styling for integrations section */
+}
+
+.caseStudiesSection {
+  /* Any specific styling for case studies section */
+}
+
+.joinBannerSection {
+  /* Any specific styling for join banner section */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Mobile-specific styling for studios page if needed */
+}

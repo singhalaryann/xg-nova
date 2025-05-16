@@ -1,103 +1,168 @@
 /* styles/studios/featuresSection.module.css */
 .heroSection {
-    background-color: #43A673;
-    padding: 80px 0;
-    width: 100%;
-  }
-  
+  background-color: #43A673;
+  padding: 80px 0;
+  width: 100%;
+  /* margin-top: 80px; */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: white;
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.featuresSection {
+  padding: 60px 0;
+  background-color: #f8f8fa;
+  position: relative;
+  z-index: 1;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.featureCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.featureIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: rgba(67, 166, 115, 0.1);
+  margin-bottom: 16px;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.featureSubtitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: #6B7280;
+  margin-left: 4px;
+}
+
+.featureDescription {
+  color: #4B5563;
+  font-size: 15px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Large screens */
+@media (min-width: 1280px) {
   .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
+  }
+}
+
+/* Desktop & Tablet */
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 60px 0;
+    /* margin-top: 60px; Account for smaller header on mobile */
   }
   
   .title {
-    color: white;
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    text-align: center;
+    font-size: 32px;
   }
   
   .subtitle {
-    color: white;
-    font-size: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .featuresSection {
-    padding: 60px 0;
-    background-color: white;
-    margin-top: -20px;
-  }
-  
-  .featuresGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    font-size: 18px;
   }
   
   .featureCard {
-    background-color: white;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .heroSection {
+    padding: 50px 0;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .featuresSection {
+    padding: 40px 0;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 26px;
   }
   
   .featureIcon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    background-color: rgba(108, 178, 142, 0.1);
-    margin-bottom: 16px;
+    width: 40px;
+    height: 40px;
   }
-  
-  .featureTitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 12px;
-  }
-  
-  .featureSubtitle {
-    font-weight: normal;
-    font-size: 14px;
-    color: #6B7280;
-  }
-  
-  .featureDescription {
-    color: #6B7280;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  @media (max-width: 1024px) {
-    .featuresGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .heroSection {
-      padding: 60px 0;
-    }
-    
-    .title {
-      font-size: 36px;
-    }
-    
-    .subtitle {
-      font-size: 18px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .featuresGrid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

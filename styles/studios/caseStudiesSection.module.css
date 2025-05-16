@@ -1,88 +1,136 @@
 /* styles/studios/caseStudiesSection.module.css */
 .section {
-    padding: 80px 0;
-    background-color: white;
-  }
-  
+  padding: 80px 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 48px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.caseCard {
+  background-color: #f8f8fa;
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.caseHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.checkIcon {
+  color: #43A673;
+}
+
+.caseTag {
+  font-size: 14px;
+  color: #43A673;
+  font-weight: 500;
+}
+
+.caseTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.caseResult {
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.caseHighlight {
+  color: #43A673;
+  font-weight: 600;
+}
+
+/* Large screens */
+@media (min-width: 1280px) {
   .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
+  }
+}
+
+/* Desktop & Tablet */
+@media (max-width: 1024px) {
+  .casesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
   }
   
   .title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 48px;
-    text-align: center;
-  }
-  
-  .casesGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    font-size: 28px;
+    margin-bottom: 36px;
   }
   
   .caseCard {
-    background-color: #f8f9fa;
-    border-radius: 12px;
-    padding: 24px;
+    padding: 24px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
   }
   
-  .caseHeader {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
+  .section {
+    padding: 50px 0;
   }
   
-  .checkIcon {
-    color: #43A673;
+  .title {
+    font-size: 26px;
   }
   
-  .caseTag {
-    font-size: 14px;
-    color: #43A673;
-    font-weight: 500;
+  .casesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
   }
   
   .caseTitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 12px;
+    font-size: 16px;
   }
-  
-  .caseResult {
-    font-size: 14px;
-    color: #4B5563;
-    line-height: 1.5;
-  }
-  
-  .caseHighlight {
-    color: #43A673;
-    font-weight: 500;
-  }
-  
-  @media (max-width: 1024px) {
-    .casesGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .section {
-      padding: 60px 0;
-    }
-    
-    .title {
-      font-size: 28px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .casesGrid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

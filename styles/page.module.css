@@ -1,32 +1,55 @@
-.page {
+/* styles/page.module.css */
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.container {
+/* These section wrappers allow you to control spacing between components */
+.heroSection,
+.novaActionSection,
+.liveOpsSection,
+.decisionSystemSection,
+.experienceDemoSection,
+.ctaBannerSection {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
-.section {
-  padding: 80px 0;
+/* You can add specific adjustments for each section */
+.heroSection {
+  /* For example, if you want to add some specific spacing */
+  margin-bottom: 0; /* No extra margin since the component has its own padding */
 }
 
+.novaActionSection {
+  /* If you want to adjust something specific to this section */
+  position: relative;
+  z-index: 1;
+}
+
+.liveOpsSection {
+  /* Custom section styling if needed */
+}
+
+.decisionSystemSection {
+  /* Custom section styling if needed */
+}
+
+.experienceDemoSection {
+  /* Custom section styling if needed */
+}
+
+.ctaBannerSection {
+  /* Custom section styling if needed */
+}
+
+/* Responsive adjustments can be added here */
 @media (max-width: 768px) {
-  .section {
-    padding: 60px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-  
-  .section {
-    padding: 40px 0;
-  }
+  /* Any mobile-specific page layout adjustments */
 }

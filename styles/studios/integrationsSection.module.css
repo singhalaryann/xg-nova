@@ -64,21 +64,19 @@
     margin-bottom: 24px;
   }
   
-  .slackIcon {
-    width: 32px;
-    height: 32px;
-    background-color: #4A154B;
-    border-radius: 4px;
-    position: relative;
+  /* REMOVED: Previous discord and slack icon styles */
+  /* .slackIcon and .discordIcon classes removed */
+  
+  /* ADDED: New styles for SVG icons */
+  .integrationIcon {
+    /* Add any additional styling for the SVG icons if needed */
+    transition: transform 0.2s ease;
   }
   
-  .discordIcon {
-    width: 32px;
-    height: 32px;
-    background-color: #5865F2;
-    border-radius: 8px;
-    position: relative;
+  .iconWrapper:hover .integrationIcon {
+    transform: scale(1.1);
   }
+  /* End of new styles */
   
   .integrationTitle {
     font-size: 20px;

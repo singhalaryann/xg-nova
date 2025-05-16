@@ -17,7 +17,14 @@ const IntegrationsSection = () => {
         <div className={styles.integrationsGrid}>
           <div className={styles.integrationCard}>
             <div className={styles.iconWrapper}>
-              <div className={styles.slackIcon}></div>
+              {/* UPDATED: Using Image component with SVG from public folder */}
+              <Image 
+                src="/slack-icon.svg" 
+                alt="Slack" 
+                width={32} 
+                height={32}
+                className={styles.integrationIcon} 
+              />
             </div>
             <h3 className={styles.integrationTitle}>Slack</h3>
             <p className={styles.integrationDescription}>
@@ -30,7 +37,14 @@ const IntegrationsSection = () => {
           
           <div className={styles.integrationCard}>
             <div className={styles.iconWrapper}>
-              <div className={styles.discordIcon}></div>
+              {/* UPDATED: Using Image component with SVG from public folder */}
+              <Image 
+                src="/discord.svg" 
+                alt="Discord" 
+                width={32} 
+                height={32}
+                className={styles.integrationIcon} 
+              />
             </div>
             <h3 className={styles.integrationTitle}>Discord</h3>
             <p className={styles.integrationDescription}>

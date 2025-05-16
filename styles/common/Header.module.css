@@ -1,192 +1,280 @@
-/* components/common/header.module.css */
+/* Header.module.css */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logoImage {
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  opacity: 0.9;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4B5563;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.navLink:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #43A673;
+  transition: width 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.navLink:hover {
+  color: #43A673;
+}
+
+.navLink:hover:after,
+.navLink:focus:after {
+  width: 100%;
+}
+
+.demoButton {
+  display: inline-block;
+  background-color: #43A673;
+  color: white;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(67, 166, 115, 0.15);
+}
+
+.demoButton:hover {
+  background-color: #36845c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(67, 166, 115, 0.2);
+}
+
+.demoButton:active {
+  transform: translateY(0);
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* Hamburger Menu - Smooth Animation */
+.hamburger {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4B5563;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6), 
+              opacity 0.25s ease-in-out,
+              background-color 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: #43A673;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: #43A673;
+}
+
+/* Hover effect on hamburger */
+.mobileMenuButton:hover .bar {
+  background-color: #43A673;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
   .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    z-index: 101;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    height: 70px;
   }
   
   .navLinks {
-    display: flex;
-    list-style: none;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navLink {
-    font-size: 16px;
-    font-weight: 500;
-    color: #4B5563;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    position: relative;
-  }
-  
-  .navLink:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #43A673;
-    transition: width 0.3s ease;
-  }
-  
-  .navLink:hover {
-    color: #43A673;
-  }
-  
-  .navLink:hover:after {
-    width: 100%;
+    gap: 24px;
   }
   
   .demoButton {
-    display: inline-block;
-    background-color: #43A673;
-    color: white;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    padding: 8px 16px;
   }
-  
-  .demoButton:hover {
-    background-color: #5a9876;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(108, 178, 142, 0.2);
-  }
-  
+}
+
+@media (max-width: 768px) {
   .mobileMenuButton {
-    display: none;
-    background: none;
-    border: none;
-    color: #4B5563;
-    cursor: pointer;
-    z-index: 101;
+    display: block;
   }
   
-  /* Desktop adjustment */
-  @media (min-width: 1280px) {
-    .container {
-      padding: 0 40px;
-    }
+  .overlay {
+    display: block;
   }
   
-  /* Tablet styles */
-  @media (max-width: 1023px) {
-    .container {
-      height: 70px;
-    }
-    
-    .navLinks {
-      gap: 24px;
-    }
-    
-    .demoButton {
-      padding: 8px 16px;
-    }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    max-width: 80%;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 40px;
+    z-index: 999;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow-y: auto;
   }
   
-  /* Mobile styles */
-  @media (max-width: 767px) {
-    .mobileMenuButton {
-      display: block;
-    }
-    
-    .nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      max-width: 300px;
-      height: 100vh;
-      background-color: white;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      padding: 80px 24px 40px;
-      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-      transition: right 0.3s ease;
-      z-index: 100;
-    }
-    
-    .nav.active {
-      right: 0;
-    }
-    
-    .navLinks {
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-    
-    .demoButton {
-      width: 100%;
-      text-align: center;
-    }
-    
-    /* Add overlay when menu is open */
-    .nav.active::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: -1;
-    }
+  .nav.active {
+    transform: translateX(0);
   }
   
-  /* Animation for mobile menu */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 40px;
+    width: 100%;
   }
   
-  .nav.active .navLinks li {
-    opacity: 0;
-    animation: fadeIn 0.4s forwards;
+  .navLink {
+    font-size: 20px;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
   
-  .nav.active .navLinks li:nth-child(1) { animation-delay: 0.1s; }
-  .nav.active .navLinks li:nth-child(2) { animation-delay: 0.2s; }
-  .nav.active .demoButton {
-    opacity: 0;
-    animation: fadeIn 0.4s forwards;
-    animation-delay: 0.3s;
+  .mobileOnly {
+    display: block;
   }
+  
+  .mobileOnly .navLink {
+    color: #43A673;
+    font-weight: 600;
+  }
+  
+  .demoButton {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+    height: 60px;
+  }
+  
+  .logo img {
+    width: 130px;
+    height: auto;
+  }
+  
+  .nav {
+    padding: 70px 24px;
+  }
+  
+  .navLink {
+    font-size: 18px;
+  }
+}

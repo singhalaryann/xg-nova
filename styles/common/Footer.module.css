@@ -1,19 +1,44 @@
 /* components/footer.module.css */
 .footer {
-    background-color: #111827;
-    padding: 24px 0;
-    width: 100%;
-  }
-  
+  background-color: #111827;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
   .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
+    padding: 0 40px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
   }
   
   .copyright {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    margin: 0;
+    font-size: 12px;
   }
+}

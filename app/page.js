@@ -1,4 +1,5 @@
-// page.js
+// app/page.js
+import styles from "../styles/page.module.css";
 import Header from "./components/common/Header";
 import Hero from "./components/home/Hero";
 import NovaAction from "./components/home/NovaAction"; 
@@ -10,17 +11,29 @@ import Footer from "./components/common/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.pageWrapper}>
       <Header />
-      <main>
-      <Hero />
-      <NovaAction />
-      <LiveOpsSection />
-      <DecisionSystem />
-      <ExperienceDemo />
-      <CTABanner />
+      <main className={styles.mainContent}>
+        <section className={styles.heroSection}>
+          <Hero />
+        </section>
+        <section className={styles.novaActionSection}>
+          <NovaAction />
+        </section>
+        <section className={styles.liveOpsSection}>
+          <LiveOpsSection />
+        </section>
+        <section className={styles.decisionSystemSection}>
+          <DecisionSystem />
+        </section>
+        <section className={styles.experienceDemoSection}>
+          <ExperienceDemo />
+        </section>
+        <section className={styles.ctaBannerSection}>
+          <CTABanner />
+        </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

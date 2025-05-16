@@ -1,254 +1,370 @@
 /* components/hero.module.css */
 .heroSection {
-    padding: 80px 0;
-    width: 100%;
-    background-color: #f9f9f9;
-  }
-  
+  padding: 80px 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  /* margin-top: 80px; */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.contentSide {
+  flex: 1;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #4B5563;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #43A673;
+  border-radius: 50%;
+}
+
+.heading {
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #43A673;
+}
+
+.dark {
+  color: #111827;
+}
+
+.highlighted {
+  color: #34D399;
+  font-weight: 700;
+}
+
+.subheading {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #6B7280;
+  margin-bottom: 40px;
+}
+
+.subheading em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.accessButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #43A673;
+  color: white;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.accessButton:hover {
+  background-color: #5a9876;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.dashboardSide {
+  flex: 1;
+}
+
+.dashboardCard {
+  background-color: #43A673;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dashboardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 500;
+}
+
+.monitorIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.dashboardControls {
+  display: flex;
+  gap: 4px;
+}
+
+.controlDot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.alertCard, .boostCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.alertHeader, .boostHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.alertHeader h3, .boostHeader h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+
+.urgentTag, .recommendedTag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+.urgentTag {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fecaca;
+}
+
+.recommendedTag {
+  background-color: rgba(52, 211, 153, 0.2);
+  color: #a7f3d0;
+}
+
+.alertDescription, .boostDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.alertActions, .boostActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.investigateButton, .fixNowButton, .launchNowButton {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.investigateButton {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.fixNowButton, .launchNowButton {
+  background-color: white;
+  color: #43A673;
+}
+
+.agents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agentIndicator {
+  width: 16px;
+  height: 16px;
+  background-color: #34D399;
+  border-radius: 50%;
+}
+
+.agentText {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+
+.aiSystemStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.aiIcon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #34D399;
+  border-radius: 50%;
+}
+
+/* Large desktop styles */
+@media (min-width: 1280px) {
   .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .contentSide {
-    flex: 1;
-  }
-  
-  .tagline {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 24px;
-    font-size: 16px;
-    color: #4B5563;
-  }
-  
-  .dot {
-    width: 8px;
-    height: 8px;
-    background-color: #43A673;
-    border-radius: 50%;
-  }
-  
-  .heading {
-    font-size: 54px;
-    line-height: 1.1;
-    font-weight: 700;
-    margin-bottom: 24px;
-    color: #43A673;
-  }
-  
-  .dark {
-    color: #111827;
-  }
-  
-  .highlighted {
-    color: #34D399;
-    font-weight: 700;
-  }
-  
-  .subheading {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #6B7280;
-    margin-bottom: 40px;
-  }
-  
-  .subheading em {
-    font-style: italic;
-    font-weight: 500;
-  }
-  
-  .accessButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #43A673;
-    color: white;
-    font-weight: 500;
-    padding: 14px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-  }
-  
-  .accessButton:hover {
-    background-color: #5a9876;
-  }
-  
-  .arrow {
-    font-size: 20px;
-  }
-  
-  .dashboardSide {
-    flex: 1;
+    padding: 0 40px;
   }
   
   .dashboardCard {
-    background-color: #43A673;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 550px;
+  }
+}
+
+/* Desktop/Tablet styles */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 60px 0;
   }
   
-  .dashboardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+  .container {
+    flex-direction: column;
   }
   
-  .dashboardTitle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-weight: 500;
+  .heading {
+    font-size: 42px;
   }
   
-  .monitorIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+  .dashboardCard {
+    max-width: 100%;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+    
   }
   
-  .dashboardControls {
-    display: flex;
-    gap: 4px;
+  .heading br {
+    display: none; /* Remove line breaks on tablet */
   }
   
-  .controlDot {
-    width: 6px;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-  }
-  
-  .alertCard, .boostCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .alertHeader, .boostHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  
-  .alertHeader h3, .boostHeader h3 {
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-  }
-  
-  .urgentTag, .recommendedTag {
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 100px;
-    font-weight: 500;
-  }
-  
-  .urgentTag {
-    background-color: rgba(239, 68, 68, 0.2);
-    color: #fecaca;
-  }
-  
-  .recommendedTag {
-    background-color: rgba(52, 211, 153, 0.2);
-    color: #a7f3d0;
-  }
-  
-  .alertDescription, .boostDescription {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 16px;
+  .subheading br {
+    display: none; /* Remove line breaks on tablet */
   }
   
   .alertActions, .boostActions {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
-  .investigateButton, .fixNowButton, .launchNowButton {
+  .investigateButton, .fixNowButton {
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 40px 0;
+    /* margin-top: 60px; Account for smaller header on mobile */
+
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .tagline {
+    margin-bottom: 16px;
     font-size: 14px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
   }
   
-  .investigateButton {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+  .heading {
+    font-size: 32px;
+    margin-bottom: 16px;
   }
   
-  .fixNowButton, .launchNowButton {
-    background-color: white;
-    color: #43A673;
+  .subheading {
+    font-size: 16px;
+    margin-bottom: 24px;
   }
   
-  .agents {
-    display: flex;
-    align-items: center;
+  .accessButton {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+  
+  .boostActions {
+    flex-direction: column;
     gap: 8px;
   }
   
-  .agentIndicator {
-    width: 16px;
-    height: 16px;
-    background-color: #34D399;
-    border-radius: 50%;
+  .agents {
+    margin-bottom: 8px;
   }
   
-  .agentText {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
+  .launchNowButton {
+    width: 100%;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+  .heading {
+    font-size: 28px;
   }
   
-  .aiSystemStatus {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
+  .dashboardCard {
+    padding: 16px;
   }
   
-  .aiIcon {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #34D399;
-    border-radius: 50%;
+  .alertCard, .boostCard {
+    padding: 16px;
   }
   
-  @media (max-width: 1024px) {
-    .container {
-      flex-direction: column;
-    }
-    
-    .heading {
-      font-size: 42px;
-    }
-    
-    .dashboardCard {
-      max-width: 100%;
-    }
+  .alertActions {
+    flex-direction: column;
+    gap: 8px;
   }
+  
+  .investigateButton, .fixNowButton {
+    width: 100%;
+  }
+}

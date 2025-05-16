@@ -165,14 +165,17 @@ const InvestorsPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className={styles.contactSection}>
-        <div className={styles.container}>
-          <h2 className={styles.contactTitle}>Get in Touch</h2>
-          <Link href="/contact" className={styles.contactButton}>
-            Schedule a call with our team <ArrowRight size={18} />
-          </Link>
-        </div>
-      </section>
+<section className={styles.contactSection}>
+  <div className={styles.container}>
+    <div className={styles.contactTitleWrapper}>
+      <h2 className={styles.contactTitle}>Get in Touch</h2>
+      <div className={styles.titleUnderline}></div>
+    </div>
+    <Link href="/contact" className={styles.contactButton}>
+      Schedule a call with our team <ArrowRight size={18} />
+    </Link>
+  </div>
+</section>
     </div>
   );
 };
